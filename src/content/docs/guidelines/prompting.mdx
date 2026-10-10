@@ -23,6 +23,27 @@ coding agents read automatically. For tools that look for their own file name, s
 - **Disclosure.** How the project expects AI involvement to be stated (see [Disclosure](/guidelines/disclosure)).
 - **Where to ask.** What to do when a task is ambiguous: stop and ask, rather than guess.
 
+## Habits worth asking for
+
+Some instructions help in almost every project. Pick the ones that fit yours.
+
+- **Stay in scope.** Change only what the task needs; leave unrelated code, files and issues alone.
+- **Ask when the target is unclear.** If a request could mean a local file or a shared remote, such
+  as a repository or a service, act on the local one or ask; never make a hard-to-undo change on a guess.
+- **Look before deleting.** Read each file before removing it and say what would be lost; names and
+  folders can be misleading.
+- **Commit only when asked.** Leave changes in the working tree until a person asks for a commit, and
+  commit only what they named.
+- **One format for commit messages.** For example [Conventional Commits](https://www.conventionalcommits.org/):
+  `fix(parser): handle empty input`.
+- **Comments describe the present.** Keep them short and plain, and say what the code does now, not
+  what it used to do (see [Readable code](/guidelines/readable-code)).
+- **Verify the real result.** Check that a change works where it will be used, for example by looking
+  at the rendered page, not only that it compiles; report failures as failures.
+- **One branch per change.** Work on a separate branch, or a git worktree, never directly on the main branch.
+- **Weigh a new dependency first.** Before adding one, check what it pulls in and how long it takes to
+  build, and say why it is needed.
+
 ## Keep it short
 
 Agents follow short, specific instructions more reliably than long essays. Prefer one line per rule,
@@ -36,6 +57,8 @@ and remove rules that no longer apply.
 - Build with `make`; run `make test` and make sure it passes before proposing a change.
 - Follow the existing code style; do not reformat unrelated code.
 - Never edit files under `generated/` or `vendor/`.
+- Change only what the task needs; ask before deleting files or touching anything outside the repository.
+- Work on a new branch; commit only when asked, using Conventional Commits.
 - Add or update tests for every behaviour you change.
 - State in the pull request which parts were written or changed by AI.
 ```
