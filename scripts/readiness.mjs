@@ -37,7 +37,7 @@ const results = {};
 for (const repo of repos) {
 	try {
 		results[repo] = await score(repo, { token });
-		console.error(`${repo}: ${results[repo].score}/4`);
+		console.error(`${repo}: ${results[repo].score}/${results[repo].total}`);
 	} catch (err) {
 		console.error(`${repo}: ${err.message}`);
 		if (previous[repo]) results[repo] = previous[repo];

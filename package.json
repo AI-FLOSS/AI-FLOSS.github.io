@@ -1,22 +1,24 @@
 {
-  "name": "ai-floss-website",
-  "type": "module",
-  "version": "0.1.0",
-  "private": true,
-  "license": "MIT AND CC-BY-SA-4.0",
-  "scripts": {
-    "dev": "astro dev",
-    "build": "astro build",
-    "preview": "astro preview",
-    "astro": "astro",
-    "test": "node --test",
-    "readiness": "node scripts/readiness.mjs"
-  },
-  "dependencies": {
-    "@astrojs/starlight": "0.42.4",
-    "astro": "7.3.4"
-  },
-  "devDependencies": {
-    "ai-readiness": "github:AI-FLOSS/ai-readiness#v0.1.0"
-  }
+	"name": "ai-floss-website",
+	"type": "module",
+	"version": "0.1.0",
+	"private": true,
+	"license": "MIT AND CC-BY-SA-4.0",
+	"scripts": {
+		"dev": "astro dev",
+		"build": "astro build",
+		"preview": "astro preview",
+		"astro": "astro",
+		"test": "node --test",
+		"readiness": "node scripts/readiness.mjs",
+		"lint": "npx -y prettier@3.9.9 --check \"**/*.{mjs,ts,json,yml,css}\"",
+		"format": "npx -y prettier@3.9.9 --write \"**/*.{mjs,ts,json,yml,css}\""
+	},
+	"dependencies": {
+		"@astrojs/starlight": "0.42.4",
+		"astro": "7.3.4"
+	},
+	"devDependencies": {
+		"ai-readiness": "github:AI-FLOSS/ai-readiness#v0.2.0"
+	}
 }

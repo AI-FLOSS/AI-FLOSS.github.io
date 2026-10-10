@@ -62,6 +62,6 @@ test('readiness scores are consistent with their checks', () => {
 	for (const [repo, r] of Object.entries(readiness)) {
 		const passed = Object.values(r.checks).filter((c) => c.pass).length;
 		assert.equal(r.score, passed, `${repo} score does not match its checks`);
-		assert.ok(r.score >= 0 && r.score <= 4, `${repo} score out of range`);
+		assert.equal(r.total, Object.keys(r.checks).length, `${repo} total does not match its checks`);
 	}
 });

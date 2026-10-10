@@ -7,12 +7,7 @@ interface Props {
 	category: string;
 }
 
-const CHECKS = [
-	['policy', 'AI usage policy'],
-	['agents', 'Agent guidance files'],
-	['tests', 'Tests run in CI'],
-	['review', 'AI-assisted review'],
-] as const;
+import { CHECKS } from 'ai-readiness';
 
 const rows = entries
 	.filter((e) => e.category === Astro.props.category)
@@ -44,9 +39,9 @@ const rows = entries
 					<td class="score">
 						{r.score ? (
 							<>
-								<strong>{r.score.score}/4</strong>
+								<strong>{r.score.score}/{r.score.total}</strong>
 								<ul>
-									{CHECKS.map(([key, label]) => (
+									{Object.entries(CHECKS).map(([key, label]) => (
 										<li class={r.score.checks[key].pass ? 'pass' : 'fail'}>
 											<span aria-hidden="true">{r.score.checks[key].pass ? '✓' : '✗'}</span>
 											<span class="sr-only">{r.score.checks[key].pass ? 'Yes:' : 'No:'}</span> {label}

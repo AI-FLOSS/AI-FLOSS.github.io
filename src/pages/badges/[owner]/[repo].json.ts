@@ -5,9 +5,9 @@ import readiness from '../../../data/readiness.json';
 const COLOURS = ['red', 'orange', 'yellow', 'green', 'brightgreen'];
 
 export const getStaticPaths = (() =>
-	Object.values(readiness as Record<string, { repo: string; score: number }>).map((r) => {
+	Object.values(readiness as Record<string, { repo: string; score: number; total: number }>).map((r) => {
 		const [owner, repo] = r.repo.split('/');
-		return { params: { owner, repo }, props: { score: r.score } };
+		return { params: { owner, repo }, props: { score: r.score, total: r.total } };
 	})) satisfies GetStaticPaths;
 
 export const GET: APIRoute = ({ props }) =>
@@ -15,8 +15,8 @@ export const GET: APIRoute = ({ props }) =>
 		JSON.stringify({
 			schemaVersion: 1,
 			label: 'AI readiness',
-			message: `${props.score}/4`,
-			color: COLOURS[props.score],
+			message: `${props.score}/${props.total}`,
+			color: COLOURS[Math.round((props.score / props.total) * (COLOURS.length - 1))],
 		}),
 		{ headers: { 'Content-Type': 'application/json' } },
 	);
