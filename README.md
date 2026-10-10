@@ -20,5 +20,11 @@ Pushes to `main` build and deploy to GitHub Pages through `.github/workflows/dep
 AI-assisted contributions are welcome. Read [AGENTS.md](AGENTS.md) before you or your agent start,
 and say in the pull request how AI was involved.
 
-To suggest a project for Awesome AI-FLOSS, edit `src/content/docs/awesome.mdx` and follow the
+To suggest a project for Awesome AI-FLOSS, add it to `src/data/awesome.json` and follow the
 criteria on that page.
+
+## AI Readiness Score
+
+`node scripts/readiness.mjs owner/repo` scores any GitHub repository, and
+`node scripts/readiness.mjs --awesome` rescores the whole list into `src/data/readiness.json`. The
+deploy workflow also rescores the list on every build and once a week.

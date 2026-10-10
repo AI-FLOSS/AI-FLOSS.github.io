@@ -1,0 +1,90 @@
+---
+// Renders one category of the Awesome AI-FLOSS list as a table, with each project's AI Readiness Score.
+import entries from '../data/awesome.json';
+import readiness from '../data/readiness.json';
+
+interface Props {
+	category: string;
+}
+
+const CHECKS = [
+	['policy', 'AI usage policy'],
+	['agents', 'Agent guidance files'],
+	['tests', 'Tests run in CI'],
+	['review', 'AI-assisted review'],
+] as const;
+
+const rows = entries
+	.filter((e) => e.category === Astro.props.category)
+	.map((e) => ({ ...e, score: (readiness as Record<string, any>)[e.repo] }));
+---
+
+<table class="awesome">
+	<thead>
+		<tr>
+			<th>Project</th>
+			<th>Description</th>
+			<th>AI use</th>
+			<th><a href="/guidelines/readiness/">Readiness</a></th>
+		</tr>
+	</thead>
+	<tbody>
+		{
+			rows.map((r) => (
+				<tr>
+					<td>
+						<a href={`https://github.com/${r.repo}`}>{r.name}</a>
+						<br />
+						<small>{r.licence}</small>
+					</td>
+					<td>{r.description}</td>
+					<td>
+						<a href={r.evidence.url}>{r.evidence.label}</a>: {r.evidence.text}
+					</td>
+					<td class="score">
+						{r.score ? (
+							<>
+								<strong>{r.score.score}/4</strong>
+								<ul>
+									{CHECKS.map(([key, label]) => (
+										<li class={r.score.checks[key].pass ? 'pass' : 'fail'}>
+											<span aria-hidden="true">{r.score.checks[key].pass ? '✓' : '✗'}</span>
+											<span class="sr-only">{r.score.checks[key].pass ? 'Yes:' : 'No:'}</span> {label}
+										</li>
+									))}
+								</ul>
+							</>
+						) : (
+							'Not scored'
+						)}
+					</td>
+				</tr>
+			))
+		}
+	</tbody>
+</table>
+
+<style>
+	.awesome td {
+		vertical-align: top;
+	}
+	.awesome small {
+		color: var(--sl-color-gray-3);
+	}
+	.score ul {
+		list-style: none;
+		padding: 0;
+		margin: 0.25rem 0 0;
+		font-size: var(--sl-text-xs);
+		white-space: nowrap;
+	}
+	.score li {
+		margin: 0;
+	}
+	.score .pass span[aria-hidden] {
+		color: var(--sl-color-accent);
+	}
+	.score .fail {
+		color: var(--sl-color-gray-3);
+	}
+</style>

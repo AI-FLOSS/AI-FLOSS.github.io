@@ -1,0 +1,362 @@
+{
+	"ghostty-org/ghostty": {
+		"repo": "ghostty-org/ghostty",
+		"score": 3,
+		"checks": {
+			"policy": {
+				"pass": true,
+				"evidence": "AI_POLICY.md"
+			},
+			"agents": {
+				"pass": true,
+				"evidence": "AGENTS.md"
+			},
+			"tests": {
+				"pass": true,
+				"evidence": "macos/GhosttyUITests/GhosttyCommandPaletteTests.swift; CI: .github/workflows/test.yml"
+			},
+			"review": {
+				"pass": false,
+				"evidence": null
+			}
+		},
+		"checkedAt": "2026-10-10",
+		"truncated": false
+	},
+	"jesseduffield/lazygit": {
+		"repo": "jesseduffield/lazygit",
+		"score": 3,
+		"checks": {
+			"policy": {
+				"pass": false,
+				"evidence": null
+			},
+			"agents": {
+				"pass": true,
+				"evidence": "AGENTS.md"
+			},
+			"tests": {
+				"pass": true,
+				"evidence": "pkg/cheatsheet/generate_test.go; CI: .github/workflows/ci.yml"
+			},
+			"review": {
+				"pass": true,
+				"evidence": "Copilot on https://github.com/jesseduffield/lazygit/pull/5505#discussion_r3068927803"
+			}
+		},
+		"checkedAt": "2026-10-10",
+		"truncated": false
+	},
+	"simonw/datasette": {
+		"repo": "simonw/datasette",
+		"score": 2,
+		"checks": {
+			"policy": {
+				"pass": false,
+				"evidence": null
+			},
+			"agents": {
+				"pass": false,
+				"evidence": null
+			},
+			"tests": {
+				"pass": true,
+				"evidence": "tests/__init__.py; CI: .github/workflows/test-pyodide.yml"
+			},
+			"review": {
+				"pass": true,
+				"evidence": "Copilot on https://github.com/simonw/datasette/pull/2877#discussion_r3759717189"
+			}
+		},
+		"checkedAt": "2026-10-10",
+		"truncated": false
+	},
+	"simonw/tools": {
+		"repo": "simonw/tools",
+		"score": 2,
+		"checks": {
+			"policy": {
+				"pass": false,
+				"evidence": null
+			},
+			"agents": {
+				"pass": false,
+				"evidence": null
+			},
+			"tests": {
+				"pass": true,
+				"evidence": "python/tests/test_find_secrets.py; CI: .github/workflows/test.yml"
+			},
+			"review": {
+				"pass": true,
+				"evidence": "Copilot on https://github.com/simonw/tools/pull/76#discussion_r2446771999"
+			}
+		},
+		"checkedAt": "2026-10-10",
+		"truncated": false
+	},
+	"jdx/mise": {
+		"repo": "jdx/mise",
+		"score": 3,
+		"checks": {
+			"policy": {
+				"pass": false,
+				"evidence": null
+			},
+			"agents": {
+				"pass": true,
+				"evidence": ".cursor/rules/conventional_commits.mdc"
+			},
+			"tests": {
+				"pass": true,
+				"evidence": "crates/aqua-registry/src/types/tests/asset.rs; CI: .github/workflows/test-impl.yml"
+			},
+			"review": {
+				"pass": true,
+				"evidence": ".coderabbit.yaml"
+			}
+		},
+		"checkedAt": "2026-10-10",
+		"truncated": false
+	},
+	"jdx/hk": {
+		"repo": "jdx/hk",
+		"score": 3,
+		"checks": {
+			"policy": {
+				"pass": false,
+				"evidence": null
+			},
+			"agents": {
+				"pass": true,
+				"evidence": "AGENTS.md"
+			},
+			"tests": {
+				"pass": true,
+				"evidence": "mcp-ui/src/app.test.tsx; CI: .github/workflows/docs-showreel.yml"
+			},
+			"review": {
+				"pass": true,
+				"evidence": ".coderabbit.yaml"
+			}
+		},
+		"checkedAt": "2026-10-10",
+		"truncated": false
+	},
+	"pnpm/pnpm": {
+		"repo": "pnpm/pnpm",
+		"score": 4,
+		"checks": {
+			"policy": {
+				"pass": true,
+				"evidence": "CONTRIBUTING.md"
+			},
+			"agents": {
+				"pass": true,
+				"evidence": "AGENTS.md"
+			},
+			"tests": {
+				"pass": true,
+				"evidence": "pnpm/crates/auth-commands/src/logout/tests/redaction.rs; CI: .github/workflows/test.yml"
+			},
+			"review": {
+				"pass": true,
+				"evidence": ".coderabbit.yaml"
+			}
+		},
+		"checkedAt": "2026-10-10",
+		"truncated": false
+	},
+	"sqlc-dev/sqlc": {
+		"repo": "sqlc-dev/sqlc",
+		"score": 3,
+		"checks": {
+			"policy": {
+				"pass": false,
+				"evidence": null
+			},
+			"agents": {
+				"pass": true,
+				"evidence": "CLAUDE.md"
+			},
+			"tests": {
+				"pass": true,
+				"evidence": "examples/authors/clickhouse/db_test.go; CI: .github/workflows/ci-kotlin.yml"
+			},
+			"review": {
+				"pass": true,
+				"evidence": "Copilot on https://github.com/sqlc-dev/sqlc/pull/4473#discussion_r3369192269"
+			}
+		},
+		"checkedAt": "2026-10-10",
+		"truncated": false
+	},
+	"gastownhall/beads": {
+		"repo": "gastownhall/beads",
+		"score": 3,
+		"checks": {
+			"policy": {
+				"pass": false,
+				"evidence": null
+			},
+			"agents": {
+				"pass": true,
+				"evidence": ".github/copilot-instructions.md"
+			},
+			"tests": {
+				"pass": true,
+				"evidence": "backend/completeness_test.go; CI: .github/workflows/docs-mintlify.yml"
+			},
+			"review": {
+				"pass": true,
+				"evidence": "Copilot on https://github.com/gastownhall/beads/pull/7191#discussion_r4177766750"
+			}
+		},
+		"checkedAt": "2026-10-10",
+		"truncated": false
+	},
+	"mitsuhiko/insta": {
+		"repo": "mitsuhiko/insta",
+		"score": 1,
+		"checks": {
+			"policy": {
+				"pass": false,
+				"evidence": null
+			},
+			"agents": {
+				"pass": false,
+				"evidence": null
+			},
+			"tests": {
+				"pass": true,
+				"evidence": "cargo-insta/tests/functional; CI: .github/workflows/tests.yml"
+			},
+			"review": {
+				"pass": false,
+				"evidence": null
+			}
+		},
+		"checkedAt": "2026-10-10",
+		"truncated": false
+	},
+	"simonw/sqlite-utils": {
+		"repo": "simonw/sqlite-utils",
+		"score": 2,
+		"checks": {
+			"policy": {
+				"pass": false,
+				"evidence": null
+			},
+			"agents": {
+				"pass": false,
+				"evidence": null
+			},
+			"tests": {
+				"pass": true,
+				"evidence": "tests/__init__.py; CI: .github/workflows/test-coverage.yml"
+			},
+			"review": {
+				"pass": true,
+				"evidence": "chatgpt-codex-connector[bot] on https://github.com/simonw/sqlite-utils/pull/750#discussion_r3370031055"
+			}
+		},
+		"checkedAt": "2026-10-10",
+		"truncated": false
+	},
+	"tursodatabase/turso": {
+		"repo": "tursodatabase/turso",
+		"score": 4,
+		"checks": {
+			"policy": {
+				"pass": true,
+				"evidence": ".github/pull_request_template.md"
+			},
+			"agents": {
+				"pass": true,
+				"evidence": "AGENTS.md"
+			},
+			"tests": {
+				"pass": true,
+				"evidence": "bindings/c/tests/Makefile; CI: .github/workflows/dotnet-test.yml"
+			},
+			"review": {
+				"pass": true,
+				"evidence": ".github/workflows/claude.yml"
+			}
+		},
+		"checkedAt": "2026-10-10",
+		"truncated": false
+	},
+	"Aider-AI/aider": {
+		"repo": "Aider-AI/aider",
+		"score": 2,
+		"checks": {
+			"policy": {
+				"pass": false,
+				"evidence": null
+			},
+			"agents": {
+				"pass": false,
+				"evidence": null
+			},
+			"tests": {
+				"pass": true,
+				"evidence": "benchmark/test_benchmark.py; CI: .github/workflows/docker-build-test.yml"
+			},
+			"review": {
+				"pass": true,
+				"evidence": "Copilot on https://github.com/Aider-AI/aider/pull/5135#discussion_r3250046816"
+			}
+		},
+		"checkedAt": "2026-10-10",
+		"truncated": false
+	},
+	"OpenHands/OpenHands": {
+		"repo": "OpenHands/OpenHands",
+		"score": 2,
+		"checks": {
+			"policy": {
+				"pass": false,
+				"evidence": null
+			},
+			"agents": {
+				"pass": true,
+				"evidence": "AGENTS.md"
+			},
+			"tests": {
+				"pass": true,
+				"evidence": "__tests__/agent-server-ui-providers.test.tsx; CI: .github/workflows/ci-script-tests.yml"
+			},
+			"review": {
+				"pass": false,
+				"evidence": null
+			}
+		},
+		"checkedAt": "2026-10-10",
+		"truncated": false
+	},
+	"aaif-goose/goose": {
+		"repo": "aaif-goose/goose",
+		"score": 3,
+		"checks": {
+			"policy": {
+				"pass": false,
+				"evidence": null
+			},
+			"agents": {
+				"pass": true,
+				"evidence": ".github/copilot-instructions.md"
+			},
+			"tests": {
+				"pass": true,
+				"evidence": "buzz/github_manager.test.mjs; CI: .github/workflows/pr-smoke-test.yml"
+			},
+			"review": {
+				"pass": true,
+				"evidence": "chatgpt-codex-connector[bot] on https://github.com/aaif-goose/goose/pull/12792#discussion_r4235164097"
+			}
+		},
+		"checkedAt": "2026-10-10",
+		"truncated": false
+	}
+}

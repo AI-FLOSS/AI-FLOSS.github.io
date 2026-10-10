@@ -1,0 +1,182 @@
+[
+	{
+		"name": "Ghostty",
+		"repo": "ghostty-org/ghostty",
+		"licence": "MIT",
+		"category": "Applications",
+		"description": "Fast, cross-platform terminal emulator with a native UI.",
+		"evidence": {
+			"label": "AI policy",
+			"url": "https://github.com/ghostty-org/ghostty/blob/main/AI_POLICY.md",
+			"text": "“Ghostty is written with plenty of AI assistance.”"
+		}
+	},
+	{
+		"name": "lazygit",
+		"repo": "jesseduffield/lazygit",
+		"licence": "MIT",
+		"category": "Applications",
+		"description": "Simple terminal UI for git.",
+		"evidence": {
+			"label": "Contributing guide",
+			"url": "https://github.com/jesseduffield/lazygit/blob/master/CONTRIBUTING.md",
+			"text": "The maintainer heavily uses AI and drives their own agent."
+		}
+	},
+	{
+		"name": "Datasette",
+		"repo": "simonw/datasette",
+		"licence": "Apache-2.0",
+		"category": "Applications",
+		"description": "Tool for exploring and publishing data.",
+		"evidence": {
+			"label": "Commit trailers",
+			"url": "https://github.com/simonw/datasette/commit/d9457d782e0f3cc2623796eae6eba655065710ad",
+			"text": "Recent commits credit Claude as co-author."
+		}
+	},
+	{
+		"name": "simonw/tools",
+		"repo": "simonw/tools",
+		"licence": "Apache-2.0",
+		"category": "Applications",
+		"description": "Collection of small browser-based utilities.",
+		"evidence": {
+			"label": "README",
+			"url": "https://github.com/simonw/tools#readme",
+			"text": "“Built mostly with the help of LLMs.”"
+		}
+	},
+	{
+		"name": "mise",
+		"repo": "jdx/mise",
+		"licence": "MIT",
+		"category": "Developer tools",
+		"description": "Dev tool version manager, environment manager and task runner.",
+		"evidence": {
+			"label": "Commit trailers",
+			"url": "https://github.com/jdx/mise/commit/d40eb9af9bd05e51a023838eae026070ea779d5b",
+			"text": "Nearly all of the maintainer's recent commits credit Claude."
+		}
+	},
+	{
+		"name": "hk",
+		"repo": "jdx/hk",
+		"licence": "MIT",
+		"category": "Developer tools",
+		"description": "Git hook manager and project linter.",
+		"evidence": {
+			"label": "Commit trailers",
+			"url": "https://github.com/jdx/hk/commit/7a26fb93d428f34c7c2427a6e2ba39cb01f812f6",
+			"text": "Most recent commits credit Claude."
+		}
+	},
+	{
+		"name": "pnpm",
+		"repo": "pnpm/pnpm",
+		"licence": "MIT",
+		"category": "Developer tools",
+		"description": "Fast, disk-space-efficient JavaScript package manager.",
+		"evidence": {
+			"label": "Contributing guide",
+			"url": "https://github.com/pnpm/pnpm/blob/main/CONTRIBUTING.md#ai-assisted-contributions",
+			"text": "“We use AI coding agents ourselves.”"
+		}
+	},
+	{
+		"name": "sqlc",
+		"repo": "sqlc-dev/sqlc",
+		"licence": "MIT",
+		"category": "Developer tools",
+		"description": "Generates type-safe code from SQL.",
+		"evidence": {
+			"label": "Commit trailers",
+			"url": "https://github.com/sqlc-dev/sqlc/commit/971579ed14225538b795512ac1a8f1a6f4475fbb",
+			"text": "Many of the creator's commits credit Claude."
+		}
+	},
+	{
+		"name": "beads",
+		"repo": "gastownhall/beads",
+		"licence": "MIT",
+		"category": "Developer tools",
+		"description": "Graph issue tracker that gives coding agents persistent memory.",
+		"evidence": {
+			"label": "Contributing guide",
+			"url": "https://github.com/gastownhall/beads/blob/main/CONTRIBUTING.md",
+			"text": "“This project uses AI agents for maintenance.”"
+		}
+	},
+	{
+		"name": "insta",
+		"repo": "mitsuhiko/insta",
+		"licence": "Apache-2.0",
+		"category": "Libraries",
+		"description": "Snapshot testing for Rust.",
+		"evidence": {
+			"label": "Commit trailers",
+			"url": "https://github.com/mitsuhiko/insta/commit/1712876439ad9ba9f5d32aff3deedcc909dd8917",
+			"text": "Many maintainer commits credit Claude."
+		}
+	},
+	{
+		"name": "sqlite-utils",
+		"repo": "simonw/sqlite-utils",
+		"licence": "Apache-2.0",
+		"category": "Libraries",
+		"description": "Python CLI and library for working with SQLite.",
+		"evidence": {
+			"label": "Commit trailers",
+			"url": "https://github.com/simonw/sqlite-utils/commit/f66ddcb215e76dcbc1fa1dff4359f2ac3dc702e5",
+			"text": "Many recent commits credit Claude."
+		}
+	},
+	{
+		"name": "Turso",
+		"repo": "tursodatabase/turso",
+		"licence": "MIT",
+		"category": "Infrastructure",
+		"description": "SQLite-compatible database written in Rust.",
+		"evidence": {
+			"label": "Contributing guide",
+			"url": "https://github.com/tursodatabase/turso/blob/main/CONTRIBUTING.md#developing-with-ai-coding-agents",
+			"text": "“You're welcome to develop Turso with AI coding agents.”"
+		}
+	},
+	{
+		"name": "Aider",
+		"repo": "Aider-AI/aider",
+		"licence": "Apache-2.0",
+		"category": "AI agents",
+		"description": "AI pair programming in your terminal.",
+		"evidence": {
+			"label": "Release history",
+			"url": "https://aider.chat/HISTORY.html",
+			"text": "“Aider writes most of its own code, usually about 70-80% of the new code in each release.”"
+		}
+	},
+	{
+		"name": "OpenHands",
+		"repo": "OpenHands/OpenHands",
+		"licence": "MIT",
+		"category": "AI agents",
+		"description": "Self-hosted platform for running coding agents.",
+		"evidence": {
+			"label": "Commit trailers",
+			"url": "https://github.com/OpenHands/OpenHands/commit/7af57f8a54115a84d7215192f822850707369122",
+			"text": "The OpenHands agent co-authors its own code."
+		}
+	},
+	{
+		"name": "goose",
+		"repo": "aaif-goose/goose",
+		"licence": "Apache-2.0",
+		"category": "AI agents",
+		"description": "Extensible local AI agent for desktop and command line.",
+		"evidence": {
+			"label": "Commit trailers",
+			"url": "https://github.com/aaif-goose/goose/commit/d1a9218df72b499c6b2a9cfd1312f04234f42390",
+			"text": "Maintainer commits credit Claude."
+		}
+	}
+]

@@ -4,6 +4,9 @@ on:
   push:
     branches: [main]
   workflow_dispatch:
+  # Rebuild weekly so readiness scores stay current.
+  schedule:
+    - cron: '0 6 * * 1'
 
 permissions:
   contents: read
@@ -24,6 +27,11 @@ jobs:
           node-version: 22
           cache: npm
       - run: npm ci
+      - name: Refresh readiness scores
+        run: node scripts/readiness.mjs --awesome
+        continue-on-error: true
+        env:
+          GITHUB_TOKEN: ${{ github.token }}
       - run: npm run build
       - uses: actions/upload-pages-artifact@v3
         with:

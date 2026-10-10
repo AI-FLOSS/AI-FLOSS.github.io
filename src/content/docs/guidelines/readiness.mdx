@@ -1,0 +1,48 @@
+---
+title: AI Readiness Score
+description: A four-point check of how ready an open source project is for AI-assisted development.
+sidebar:
+  order: 5
+---
+
+The AI Readiness Score measures how well a project is set up to accept AI-assisted contributions
+safely. It has four checks, one point each, and every check can be verified from the repository
+itself.
+
+| Check | What counts | Guideline |
+| --- | --- | --- |
+| **AI usage policy** | An `AI_POLICY.md`, or a section about AI use in `CONTRIBUTING.md`, or an AI disclosure checkbox in the pull request template. | [Disclosure](/guidelines/disclosure/) |
+| **Agent guidance files** | `AGENTS.md`, `CLAUDE.md`, `GEMINI.md`, `.github/copilot-instructions.md`, Cursor, Windsurf or Cline rules. | [Prompting guidelines](/guidelines/prompting/) |
+| **Tests run in CI** | A test suite, and a CI workflow that runs it on pull requests. | [Test-driven development](/guidelines/testing/) |
+| **AI-assisted review** | An AI reviewer's config (such as CodeRabbit), an AI review action in CI, or an AI review bot active on recent pull requests. | [AI-assisted review](/guidelines/review/) |
+
+## What it does not measure
+
+The score shows that the mechanisms exist, not how well they work. Test-driven development itself
+cannot be seen from outside, so the score checks for the next best thing: tests that every pull
+request must pass. A low score is not a judgement of a project's quality, only a list of things it
+could add.
+
+## Check your project
+
+The checker is a small script in the website repository. It needs Node.js and a GitHub token, which
+it takes from `GITHUB_TOKEN` or from the GitHub CLI.
+
+```sh
+git clone https://github.com/AI-FLOSS/AI-FLOSS.github.io
+cd AI-FLOSS.github.io
+node scripts/readiness.mjs owner/repo
+```
+
+It prints the score and the file or activity that satisfied each check:
+
+```text
+owner/repo: 3/4
+  ✓ policy  (AI_POLICY.md)
+  ✓ agents  (AGENTS.md)
+  ✓ tests  (tests/test_parser.py; CI: .github/workflows/test.yml)
+  ✗ review
+```
+
+The checks are heuristics. If the script gets your project wrong, please
+[open an issue](https://github.com/AI-FLOSS/AI-FLOSS.github.io/issues).
