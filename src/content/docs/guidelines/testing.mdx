@@ -1,0 +1,28 @@
+---
+title: Test-driven development
+sidebar:
+  order: 4
+---
+
+
+Tests are the contract between people and machines. When the expected behaviour is written down
+first, code from any source can be checked against it, and a change that breaks the contract does
+not land.
+
+## The loop
+
+1. A person describes the behaviour they want, as one or more failing tests.
+2. The agent writes code until those tests pass, without weakening or deleting them.
+3. The full test suite runs in CI on every pull request.
+4. A reviewer, human and AI, checks that the tests really describe what was asked for.
+
+## Rules worth writing into AGENTS.md
+
+- Never change a test to make it pass unless the task is to change that behaviour.
+- Every bug fix comes with a test that failed before the fix.
+- Do not mark a task done until the full suite passes locally.
+
+## Why it matters more with AI
+
+AI can produce a lot of plausible code quickly. Tests turn "looks right" into "is right", and they
+keep doing so long after the original author, human or not, has moved on.

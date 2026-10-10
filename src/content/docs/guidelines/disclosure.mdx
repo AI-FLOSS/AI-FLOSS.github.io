@@ -1,0 +1,40 @@
+---
+title: Disclosure
+sidebar:
+  order: 2
+---
+
+
+Reviewers review differently when they know a change was largely written by AI, and users deserve
+to know how the software they run was made. Disclosure should be simple, consistent and free of
+stigma.
+
+## In commits
+
+Add a [git trailer](https://git-scm.com/docs/git-interpret-trailers) naming the tool. Git can add
+it for you:
+
+```sh
+git commit -m "fix(parser): handle empty input" \
+  --trailer "Assisted-by: <tool name and version>"
+```
+
+Trailers are machine-readable, so a project can count or filter AI-assisted commits with
+`git log --format='%(trailers:key=Assisted-by)'`.
+
+## In pull requests
+
+Add a short section to the pull request template:
+
+```md filename=".github/pull_request_template.md"
+## AI involvement
+
+- [ ] None
+- [ ] AI helped with parts of this change (say which)
+- [ ] Most of this change was written by AI and reviewed by me
+```
+
+## What disclosure is not
+
+Disclosure is not an admission of lower quality, and it does not move responsibility. The person who
+submits a change is accountable for it, however it was written.

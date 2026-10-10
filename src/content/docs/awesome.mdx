@@ -1,0 +1,68 @@
+---
+title: Awesome AI-FLOSS
+description: A curated list of free and open source software developed with AI assistance.
+---
+
+
+A curated list of free and open source software developed with substantial AI assistance, where the
+maintainers say so publicly. Every entry links to the evidence.
+
+Last checked October 2026.
+
+## Criteria
+
+- **Free software.** Released under an OSI-approved or FSF-recognised free licence.
+- **Openly AI-assisted.** The maintainers say in their own sources (a policy, README, release
+  notes or routine commit trailers) that AI tools play a real part in its development. Shipping an AI feature, or only having an `AGENTS.md`, is not enough.
+- **Alive.** Actively maintained, with commits in the last six months.
+
+## Applications
+
+- [Ghostty](https://github.com/ghostty-org/ghostty) (MIT): fast, cross-platform terminal emulator with a native UI.
+  [AI policy](https://github.com/ghostty-org/ghostty/blob/main/AI_POLICY.md): "Ghostty is written with plenty of AI assistance."
+- [lazygit](https://github.com/jesseduffield/lazygit) (MIT): simple terminal UI for git.
+  [Contributing guide](https://github.com/jesseduffield/lazygit/blob/master/CONTRIBUTING.md): the maintainer heavily uses AI and drives their own agent.
+- [Datasette](https://github.com/simonw/datasette) (Apache-2.0): tool for exploring and publishing data.
+  [Commit trailers](https://github.com/simonw/datasette/commit/d9457d782e0f3cc2623796eae6eba655065710ad) credit Claude on recent commits.
+- [simonw/tools](https://github.com/simonw/tools) (Apache-2.0): collection of small browser-based utilities.
+  [README](https://github.com/simonw/tools#readme): "built mostly with the help of LLMs."
+
+## Developer tools
+
+- [mise](https://github.com/jdx/mise) (MIT): dev tool version manager, environment manager and task runner.
+  [Commit trailers](https://github.com/jdx/mise/commit/d40eb9af9bd05e51a023838eae026070ea779d5b) credit Claude on nearly all of the maintainer's recent commits.
+- [hk](https://github.com/jdx/hk) (MIT): git hook manager and project linter.
+  [Commit trailers](https://github.com/jdx/hk/commit/7a26fb93d428f34c7c2427a6e2ba39cb01f812f6) credit Claude on most recent commits.
+- [pnpm](https://github.com/pnpm/pnpm) (MIT): fast, disk-space-efficient JavaScript package manager.
+  [Contributing guide](https://github.com/pnpm/pnpm/blob/main/CONTRIBUTING.md#ai-assisted-contributions): "We use AI coding agents ourselves."
+- [sqlc](https://github.com/sqlc-dev/sqlc) (MIT): generates type-safe code from SQL.
+  [Commit trailers](https://github.com/sqlc-dev/sqlc/commit/971579ed14225538b795512ac1a8f1a6f4475fbb) credit Claude on many of the creator's commits.
+- [beads](https://github.com/gastownhall/beads) (MIT): graph issue tracker that gives coding agents persistent memory.
+  [Contributing guide](https://github.com/gastownhall/beads/blob/main/CONTRIBUTING.md): "This project uses AI agents for maintenance."
+
+## Libraries
+
+- [insta](https://github.com/mitsuhiko/insta) (Apache-2.0): snapshot testing for Rust.
+  [Commit trailers](https://github.com/mitsuhiko/insta/commit/1712876439ad9ba9f5d32aff3deedcc909dd8917) credit Claude on many maintainer commits.
+- [sqlite-utils](https://github.com/simonw/sqlite-utils) (Apache-2.0): Python CLI and library for working with SQLite.
+  [Commit trailers](https://github.com/simonw/sqlite-utils/commit/f66ddcb215e76dcbc1fa1dff4359f2ac3dc702e5) credit Claude on many recent commits.
+
+## Infrastructure
+
+- [Turso](https://github.com/tursodatabase/turso) (MIT): SQLite-compatible database written in Rust.
+  [Contributing guide](https://github.com/tursodatabase/turso/blob/main/CONTRIBUTING.md#developing-with-ai-coding-agents): "You're welcome to develop Turso with AI coding agents."
+
+## AI agents
+
+- [Aider](https://github.com/Aider-AI/aider) (Apache-2.0): AI pair programming in your terminal.
+  [Release history](https://aider.chat/HISTORY.html): "Aider writes most of its own code, usually about 70-80% of the new code in each release."
+- [OpenHands](https://github.com/OpenHands/OpenHands) (MIT): self-hosted platform for running coding agents.
+  [Commit trailers](https://github.com/OpenHands/OpenHands/commit/7af57f8a54115a84d7215192f822850707369122) show the OpenHands agent co-authoring its own code.
+- [goose](https://github.com/aaif-goose/goose) (Apache-2.0): extensible local AI agent for desktop and command line.
+  [Commit trailers](https://github.com/aaif-goose/goose/commit/d1a9218df72b499c6b2a9cfd1312f04234f42390) credit Claude on maintainer commits.
+
+## Suggest a project
+
+Open a pull request that adds an entry to [this page](https://github.com/AI-FLOSS/AI-FLOSS.github.io/blob/main/content/awesome.mdx)
+in the right section, in the same format: name and repository link, SPDX licence, a one-line
+description, and a link to the maintainers' own evidence of AI use.

@@ -1,0 +1,24 @@
+---
+title: AI-assisted review
+sidebar:
+  order: 3
+---
+
+
+If AI makes writing code cheaper, review becomes the bottleneck. AI can help there too: as a first
+pass that catches problems before a maintainer spends time on them.
+
+## What it is good at
+
+- Spotting likely bugs, unhandled errors and edge cases.
+- Flagging security issues such as injection, unsafe deserialisation or leaked secrets.
+- Checking a change against the project's own rules in `AGENTS.md` or `CONTRIBUTING.md`.
+- Summarising a large change so a human reviewer knows where to look.
+
+## How to use it
+
+- **Run it automatically** on every pull request, so contributors see feedback before a maintainer does.
+- **Treat findings as suggestions.** An AI reviewer can be wrong; a human decides what to act on.
+- **Keep a human approval** for every merge. AI review adds a check, it never replaces one.
+- **Review AI-written code with AI too.** A second model, or the same model with a reviewer's
+  instructions, often catches what the author missed.

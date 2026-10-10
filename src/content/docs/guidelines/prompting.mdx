@@ -1,0 +1,41 @@
+---
+title: Prompting guidelines
+sidebar:
+  order: 1
+---
+
+
+An AI agent arrives at your repository knowing nothing about it. A short instruction file, kept in
+the repository and reviewed like code, tells every agent the same things a new human contributor
+would need to learn.
+
+## Use AGENTS.md
+
+[AGENTS.md](https://agents.md) is a plain Markdown file at the root of the repository that many
+coding agents read automatically. For tools that look for their own file name, such as
+`CLAUDE.md`, add a symlink to `AGENTS.md` rather than a second copy.
+
+## What to put in it
+
+- **How to build and test.** The exact commands, and which tests must pass before a change is proposed.
+- **Conventions.** Code style, naming, commit message format, where new files belong.
+- **Boundaries.** Files, directories or systems the agent must never change, such as generated code or release scripts.
+- **Disclosure.** How the project expects AI involvement to be stated (see [Disclosure](/guidelines/disclosure)).
+- **Where to ask.** What to do when a task is ambiguous: stop and ask, rather than guess.
+
+## Keep it short
+
+Agents follow short, specific instructions more reliably than long essays. Prefer one line per rule,
+and remove rules that no longer apply.
+
+## Example
+
+```md filename="AGENTS.md"
+# Instructions for AI agents
+
+- Build with `make`; run `make test` and make sure it passes before proposing a change.
+- Follow the existing code style; do not reformat unrelated code.
+- Never edit files under `generated/` or `vendor/`.
+- Add or update tests for every behaviour you change.
+- State in the pull request which parts were written or changed by AI.
+```

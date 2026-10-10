@@ -1,0 +1,12 @@
+/* Green accent to match the logo, in both colour schemes. */
+:root {
+	--sl-color-accent-low: #0f2e22;
+	--sl-color-accent: #2f9e74;
+	--sl-color-accent-high: #b7ecd5;
+}
+
+:root[data-theme='light'] {
+	--sl-color-accent-low: #c9f0de;
+	--sl-color-accent: #1f7a5a;
+	--sl-color-accent-high: #0e3a2a;
+}
