@@ -1,0 +1,37 @@
+---
+title: Readable code
+sidebar:
+  order: 6
+---
+
+
+Code is written once and read many times. Whoever or whatever wrote it, a person should be able to
+open the file, understand it and change it without an AI to explain it first. That keeps a project
+alive if the tools change, get more expensive or go away, and it keeps human review honest.
+
+## What readable means
+
+- **Simple first.** Choose the plainest solution that works; add cleverness only when a measured
+  need calls for it.
+- **Clear names.** Variables, functions and files say what they hold or do, so the code reads
+  without a guide.
+- **Small pieces.** Short functions with one job each, and files a reader can hold in their head.
+- **Follow the house style.** Match the project's existing patterns, formatter and linter rules, so
+  new code looks like the code around it.
+- **Comments explain why.** Say why the code is the way it is when that isn't obvious; don't repeat
+  what the code already says.
+- **No dead weight.** Remove unused code, speculative options and copy-pasted variants instead of
+  leaving them for the next reader.
+
+## Rules worth writing into AGENTS.md
+
+- Prefer the simplest change that solves the task; do not add abstractions for needs that don't exist yet.
+- Follow the existing style and run the project's formatter and linter before finishing.
+- Keep functions short and names descriptive; split anything a reader can't follow in one pass.
+- Do not leave unused code, debug output or commented-out blocks behind.
+
+## Why it matters more with AI
+
+AI can produce far more code than people can comfortably read, and it doesn't mind if the result is
+tangled. A project that accepts unreadable code because "the AI understands it" depends on that AI
+for good. Readable code keeps people in charge: anyone can review it, fix it or take it over by hand.
