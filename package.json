@@ -9,10 +9,14 @@
     "build": "astro build",
     "preview": "astro preview",
     "astro": "astro",
-    "test": "node --test"
+    "test": "node --test",
+    "readiness": "node scripts/readiness.mjs"
   },
   "dependencies": {
     "@astrojs/starlight": "0.42.4",
     "astro": "7.3.4"
+  },
+  "devDependencies": {
+    "ai-readiness": "github:AI-FLOSS/ai-readiness#v0.1.0"
   }
 }

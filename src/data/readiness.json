@@ -353,7 +353,7 @@
 			},
 			"review": {
 				"pass": true,
-				"evidence": "chatgpt-codex-connector[bot] on https://github.com/aaif-goose/goose/pull/12792#discussion_r4235164097"
+				"evidence": "chatgpt-codex-connector[bot] on https://github.com/aaif-goose/goose/pull/12821#discussion_r4239566254"
 			}
 		},
 		"checkedAt": "2026-10-10",

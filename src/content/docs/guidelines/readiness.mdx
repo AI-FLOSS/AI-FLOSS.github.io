@@ -25,24 +25,33 @@ could add.
 
 ## Check your project
 
-The checker is a small script in the website repository. It needs Node.js and a GitHub token, which
-it takes from `GITHUB_TOKEN` or from the GitHub CLI.
+Run the [ai-readiness](https://github.com/AI-FLOSS/ai-readiness) checker. It needs Node.js 20 or
+later and a GitHub token, which it takes from `GITHUB_TOKEN` or from the GitHub CLI.
 
 ```sh
-git clone https://github.com/AI-FLOSS/AI-FLOSS.github.io
-cd AI-FLOSS.github.io
-node scripts/readiness.mjs owner/repo
+npx github:AI-FLOSS/ai-readiness owner/repo
 ```
 
 It prints the score and the file or activity that satisfied each check:
 
 ```text
 owner/repo: 3/4
-  ✓ policy  (AI_POLICY.md)
-  ✓ agents  (AGENTS.md)
-  ✓ tests  (tests/test_parser.py; CI: .github/workflows/test.yml)
-  ✗ review
+  ✓ AI usage policy  (AI_POLICY.md)
+  ✓ Agent guidance files  (AGENTS.md)
+  ✓ Tests run in CI  (tests/test_parser.py; CI: .github/workflows/test.yml)
+  ✗ AI-assisted review
 ```
 
-The checks are heuristics. If the script gets your project wrong, please
-[open an issue](https://github.com/AI-FLOSS/AI-FLOSS.github.io/issues).
+## Check it in CI
+
+Add the GitHub Action to a workflow to see the score in every run's summary, or to fail the build
+when it drops below a minimum:
+
+```yaml
+- uses: AI-FLOSS/ai-readiness@v0
+  with:
+    min-score: 3
+```
+
+The checks are heuristics. If the checker gets your project wrong, please
+[open an issue](https://github.com/AI-FLOSS/ai-readiness/issues).

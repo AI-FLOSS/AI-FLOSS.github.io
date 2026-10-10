@@ -31,9 +31,9 @@ criteria on that page.
 
 ## AI Readiness Score
 
-`node scripts/readiness.mjs owner/repo` scores any GitHub repository, and
-`node scripts/readiness.mjs --awesome` rescores the whole list into `src/data/readiness.json`. The
-deploy workflow also rescores the list on every build and once a week.
+Scores come from the [ai-readiness](https://github.com/AI-FLOSS/ai-readiness) package.
+`npm run readiness` rescores the whole list into `src/data/readiness.json`, and the deploy workflow
+does the same on every build and once a week.
 
 ## Licence
 
