@@ -89,6 +89,16 @@ const REVIEW_BOTS = new Set([
 
 const find = (paths, patterns) => paths.find((p) => patterns.some((re) => re.test(p)));
 
+async function findPolicy(slug, paths) {
+	const found = find(paths, POLICY_FILES);
+	if (found) return found;
+	for (const p of paths.filter((p) => CONTRIBUTING.test(p) || PR_TEMPLATE.test(p))) {
+		const text = await api(`repos/${slug}/contents/${encodeURI(p)}`, { raw: true });
+		if (AI_HEADING.test(text ?? '')) return p;
+	}
+	return undefined;
+}
+
 export async function score(slug) {
 	const repo = await api(`repos/${slug}`);
 	if (!repo) throw new Error(`${slug}: repository not found`);
@@ -99,11 +109,16 @@ export async function score(slug) {
 	const workflowPaths = paths.filter((p) => /^\.github\/workflows\/[^/]+\.ya?ml$/.test(p)).slice(0, 30);
 	const workflows = await Promise.all(workflowPaths.map(async (p) => [p, (await read(p)) ?? '']));
 
-	// 1. A written AI usage policy.
-	let policy = find(paths, POLICY_FILES);
-	for (const p of paths.filter((p) => CONTRIBUTING.test(p) || PR_TEMPLATE.test(p))) {
-		if (policy) break;
-		if (AI_HEADING.test((await read(p)) ?? '')) policy = p;
+	// 1. A written AI usage policy, in the repository or in the owner's .github defaults that GitHub applies to it.
+	let policy = await findPolicy(slug, paths);
+	const owner = slug.split('/')[0];
+	if (!policy && !slug.endsWith('/.github')) {
+		const defaults = await api(`repos/${owner}/.github`);
+		if (defaults) {
+			const defaultTree = await api(`repos/${owner}/.github/git/trees/${defaults.default_branch}?recursive=1`);
+			const found = await findPolicy(`${owner}/.github`, defaultTree.tree.map((e) => e.path));
+			if (found) policy = `${owner}/.github: ${found}`;
+		}
 	}
 
 	// 2. Instruction files for AI agents.
