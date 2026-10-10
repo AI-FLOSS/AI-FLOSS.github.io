@@ -1,5 +1,7 @@
 # AI-FLOSS website
 
+[![AI readiness](https://img.shields.io/endpoint?url=https://ai-floss.github.io/badges/AI-FLOSS/AI-FLOSS.github.io.json)](https://ai-floss.github.io/guidelines/readiness/)
+
 Source for <https://ai-floss.github.io>, the home page of the AI-FLOSS community.
 
 Built with [Astro Starlight](https://starlight.astro.build). Pages are MDX files in

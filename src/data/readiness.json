@@ -358,5 +358,77 @@
 		},
 		"checkedAt": "2026-10-10",
 		"truncated": false
+	},
+	"AI-FLOSS/Anthem": {
+		"repo": "AI-FLOSS/Anthem",
+		"score": 1,
+		"checks": {
+			"policy": {
+				"pass": true,
+				"evidence": "AI-FLOSS/.github: AI_POLICY.md"
+			},
+			"agents": {
+				"pass": false,
+				"evidence": null
+			},
+			"tests": {
+				"pass": false,
+				"evidence": null
+			},
+			"review": {
+				"pass": false,
+				"evidence": null
+			}
+		},
+		"checkedAt": "2026-10-10",
+		"truncated": false
+	},
+	"AI-FLOSS/AI-FLOSS.github.io": {
+		"repo": "AI-FLOSS/AI-FLOSS.github.io",
+		"score": 4,
+		"checks": {
+			"policy": {
+				"pass": true,
+				"evidence": "AI-FLOSS/.github: AI_POLICY.md"
+			},
+			"agents": {
+				"pass": true,
+				"evidence": "AGENTS.md"
+			},
+			"tests": {
+				"pass": true,
+				"evidence": "test/awesome.test.mjs; CI: .github/workflows/ci.yml"
+			},
+			"review": {
+				"pass": true,
+				"evidence": ".github/workflows/ai-review.yml"
+			}
+		},
+		"checkedAt": "2026-10-10",
+		"truncated": false
+	},
+	"AI-FLOSS/ai-readiness": {
+		"repo": "AI-FLOSS/ai-readiness",
+		"score": 4,
+		"checks": {
+			"policy": {
+				"pass": true,
+				"evidence": "AI-FLOSS/.github: AI_POLICY.md"
+			},
+			"agents": {
+				"pass": true,
+				"evidence": "AGENTS.md"
+			},
+			"tests": {
+				"pass": true,
+				"evidence": "test/format.test.mjs; CI: .github/workflows/ci.yml"
+			},
+			"review": {
+				"pass": true,
+				"evidence": ".github/workflows/ai-review.yml"
+			}
+		},
+		"checkedAt": "2026-10-10",
+		"truncated": false
 	}
 }
