@@ -13,7 +13,7 @@ export default defineConfig({
 			favicon: '/favicon.svg',
 			social: [
 				{ icon: 'github', label: 'GitHub', href: 'https://github.com/x-tech-laboratories' },
-				{ icon: 'matrix', label: 'Matrix', href: 'https://matrix.to/#/#ai-floss:matrix.org' },
+				{ icon: 'matrix', label: 'Matrix', href: 'https://matrix.to/#/#x-tech-laboratories:matrix.org' },
 			],
 			editLink: { baseUrl: 'https://github.com/x-tech-laboratories/x-tech-laboratories.github.io/edit/main/' },
 			customCss: [
