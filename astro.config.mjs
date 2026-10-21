@@ -19,6 +19,7 @@ export default defineConfig({
 			customCss: ['./src/styles/theme.css'],
 			sidebar: [
 				{ label: 'Guidelines', items: [{ autogenerate: { directory: 'guidelines' } }] },
+				{ label: 'Projects', slug: 'projects' },
 				{ label: 'Awesome AI-FLOSS', slug: 'awesome' },
 				{ label: 'Get involved', slug: 'join' },
 			],
