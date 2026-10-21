@@ -1,7 +1,7 @@
 {
 	"ghostty-org/ghostty": {
 		"repo": "ghostty-org/ghostty",
-		"score": 7,
+		"score": 6,
 		"total": 8,
 		"checks": {
 			"policy": {
@@ -29,8 +29,8 @@
 				"evidence": ".github/workflows/vouch-check-pr.yml"
 			},
 			"disclosure": {
-				"pass": true,
-				"evidence": "1 of the last 100 commits with an AI trailer"
+				"pass": false,
+				"evidence": null
 			},
 			"protection": {
 				"pass": true,
@@ -614,8 +614,49 @@
 		"checkedAt": "2026-10-21",
 		"truncated": false
 	},
-	"x-tech-laboratories/Anthem": {
-		"repo": "x-tech-laboratories/Anthem",
+	"x-tech-laboratories/X-Stream": {
+		"repo": "x-tech-laboratories/X-Stream",
+		"score": 8,
+		"total": 8,
+		"checks": {
+			"policy": {
+				"pass": true,
+				"evidence": "x-tech-laboratories/.github: AI_POLICY.md"
+			},
+			"agents": {
+				"pass": true,
+				"evidence": "AGENTS.md"
+			},
+			"tests": {
+				"pass": true,
+				"evidence": "tests/App.test.tsx; CI: .github/workflows/ci.yml"
+			},
+			"review": {
+				"pass": true,
+				"evidence": ".github/workflows/ai-review.yml"
+			},
+			"environment": {
+				"pass": true,
+				"evidence": "flake.nix"
+			},
+			"quality": {
+				"pass": true,
+				"evidence": ".github/workflows/ci.yml"
+			},
+			"disclosure": {
+				"pass": true,
+				"evidence": "20 of the last 76 commits with an AI trailer"
+			},
+			"protection": {
+				"pass": true,
+				"evidence": "ruleset requires pull request"
+			}
+		},
+		"checkedAt": "2026-10-21",
+		"truncated": false
+	},
+	"x-tech-laboratories/X-Music": {
+		"repo": "x-tech-laboratories/X-Music",
 		"score": 8,
 		"total": 8,
 		"checks": {
@@ -645,7 +686,7 @@
 			},
 			"disclosure": {
 				"pass": true,
-				"evidence": "6 of the last 42 commits with an AI trailer; 2 of the last 5 pull requests with AI involvement ticked"
+				"evidence": "6 of the last 42 commits with an AI trailer; 3 of the last 6 pull requests with AI involvement ticked"
 			},
 			"protection": {
 				"pass": true,
@@ -686,7 +727,7 @@
 			},
 			"disclosure": {
 				"pass": true,
-				"evidence": "4 of the last 12 commits with an AI trailer; 3 of the last 4 pull requests with AI involvement ticked"
+				"evidence": "6 of the last 14 commits with an AI trailer; 5 of the last 7 pull requests with AI involvement ticked"
 			},
 			"protection": {
 				"pass": true,
