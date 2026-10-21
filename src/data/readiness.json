@@ -616,7 +616,7 @@
 	},
 	"x-tech-laboratories/X-Stream": {
 		"repo": "x-tech-laboratories/X-Stream",
-		"score": 7,
+		"score": 8,
 		"total": 8,
 		"checks": {
 			"policy": {
@@ -648,8 +648,8 @@
 				"evidence": "20 of the last 76 commits with an AI trailer"
 			},
 			"protection": {
-				"pass": false,
-				"evidence": null
+				"pass": true,
+				"evidence": "ruleset requires pull request"
 			}
 		},
 		"checkedAt": "2026-10-21",
@@ -686,7 +686,7 @@
 			},
 			"disclosure": {
 				"pass": true,
-				"evidence": "6 of the last 42 commits with an AI trailer; 2 of the last 5 pull requests with AI involvement ticked"
+				"evidence": "6 of the last 42 commits with an AI trailer; 3 of the last 6 pull requests with AI involvement ticked"
 			},
 			"protection": {
 				"pass": true,
@@ -727,7 +727,7 @@
 			},
 			"disclosure": {
 				"pass": true,
-				"evidence": "6 of the last 14 commits with an AI trailer; 4 of the last 6 pull requests with AI involvement ticked"
+				"evidence": "6 of the last 14 commits with an AI trailer; 5 of the last 7 pull requests with AI involvement ticked"
 			},
 			"protection": {
 				"pass": true,
