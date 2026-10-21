@@ -21,6 +21,6 @@
 		"astro": "7.3.4"
 	},
 	"devDependencies": {
-		"ai-readiness": "github:AI-FLOSS/ai-readiness#v0.2.0"
+		"ai-readiness": "github:x-tech-laboratories/ai-readiness#v0.2.0"
 	}
 }
