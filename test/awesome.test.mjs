@@ -1,4 +1,4 @@
-// Checks that every Awesome AI-FLOSS entry is complete and that the readiness data matches the list.
+// Checks that every Awesome AI-Assisted Open Source entry is complete and that the readiness data matches the list.
 import { test } from 'node:test';
 import assert from 'node:assert/strict';
 import { readFileSync } from 'node:fs';

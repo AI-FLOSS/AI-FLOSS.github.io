@@ -1,8 +1,8 @@
-# AI-FLOSS website
+# X-Tech Laboratories website
 
-[![AI readiness](https://img.shields.io/endpoint?url=https://ai-floss.github.io/badges/AI-FLOSS/AI-FLOSS.github.io.json)](https://ai-floss.github.io/guidelines/readiness/)
+[![AI readiness](https://img.shields.io/endpoint?url=https://x-tech-laboratories.github.io/badges/x-tech-laboratories/x-tech-laboratories.github.io.json)](https://x-tech-laboratories.github.io/guidelines/readiness/)
 
-Source for <https://ai-floss.github.io>, the home page of the AI-FLOSS community.
+Source for <https://x-tech-laboratories.github.io>, the home page of the X-Tech Laboratories community.
 
 Built with [Astro Starlight](https://starlight.astro.build). Pages are MDX files in
 `src/content/docs/`, and the sidebar is set in `astro.config.mjs`.
@@ -19,7 +19,7 @@ Pushes to `main` build and deploy to GitHub Pages through `.github/workflows/dep
 
 ## Testing
 
-`npm test` checks that every Awesome AI-FLOSS entry is complete and has a readiness score. CI runs
+`npm test` checks that every Awesome AI-Assisted Open Source entry is complete and has a readiness score. CI runs
 the tests, the build and an internal link check on every pull request, and Claude reviews each pull
 request when the `ANTHROPIC_API_KEY` secret is set.
 
@@ -28,12 +28,12 @@ request when the `ANTHROPIC_API_KEY` secret is set.
 AI-assisted contributions are welcome. Read [AGENTS.md](AGENTS.md) before you or your agent start,
 and say in the pull request how AI was involved.
 
-To suggest a project for Awesome AI-FLOSS, add it to `src/data/awesome.json` and follow the
+To suggest a project for Awesome AI-Assisted Open Source, add it to `src/data/awesome.json` and follow the
 criteria on that page.
 
 ## AI Readiness Score
 
-Scores come from the [ai-readiness](https://github.com/AI-FLOSS/ai-readiness) package.
+Scores come from the [ai-readiness](https://github.com/x-tech-laboratories/ai-readiness) package.
 `npm run readiness` rescores the whole list into `src/data/readiness.json`, and the deploy workflow
 does the same on every build and once a week.
 

@@ -1,12 +1,24 @@
-/* Green accent to match the logo, in both colour schemes. */
+/* Brand blue accent, in both colour schemes. */
 :root {
-	--sl-color-accent-low: #0f2e22;
-	--sl-color-accent: #2f9e74;
-	--sl-color-accent-high: #b7ecd5;
+	--sl-color-accent-low: #00264d;
+	--sl-color-accent: #0088ff;
+	--sl-color-accent-high: #b3dbff;
+	--sl-font: 'Noto Sans', system-ui, sans-serif;
 }
 
 :root[data-theme='light'] {
-	--sl-color-accent-low: #c9f0de;
-	--sl-color-accent: #1f7a5a;
-	--sl-color-accent-high: #0e3a2a;
+	--sl-color-accent-low: #cce6ff;
+	--sl-color-accent: #0070d6;
+	--sl-color-accent-high: #00284d;
+}
+
+/* Headings use the logo's typeface. */
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+	font-family: 'Rajdhani', var(--sl-font);
+	font-weight: 700;
 }

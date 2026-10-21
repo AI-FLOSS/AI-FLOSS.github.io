@@ -1,0 +1,40 @@
+---
+title: Extensible and interoperable
+sidebar:
+  order: 1
+---
+
+People want different things from the same software. A project that only one kind of user can live
+with either loses everyone else or gets forked. Building in room to change lets one codebase serve
+them all.
+
+## Make it extensible
+
+- **Plugins for features, not patches.** Give new behaviour a stable extension point, such as a
+  plugin interface, a hook or a scripting API, so it can be added without editing the core.
+- **Keep the core small.** If a feature is wanted by some users and not others, it belongs in a
+  plugin.
+- **Version the extension API.** Say what is stable, and give notice before breaking it.
+
+## Make it configurable
+
+- **Settings over hard-coded choices.** Defaults should suit most people; settings let everyone else
+  stay.
+- **Separate look from logic.** Themes, layouts and keyboard shortcuts belong to the user, not the
+  code.
+- **Keep configuration as plain files.** People should be able to read, share, version and copy
+  their settings.
+
+## Make it interoperable
+
+- **Use open formats and standard protocols.** Data the user creates should be readable by other
+  tools, now and after the project is gone.
+- **Import and export.** Read the formats of the tools people already use, and write formats others
+  can read.
+- **Expose what you do.** A command-line interface, a documented API or a standard desktop
+  integration lets other programs build on yours.
+
+## When someone asks for a fork
+
+Before splitting a project, ask whether the difference can be a plugin, a setting or a theme. A fork
+doubles the maintenance and halves the users; an extension point does neither.

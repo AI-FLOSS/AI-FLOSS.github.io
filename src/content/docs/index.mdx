@@ -1,65 +1,57 @@
 ---
 title: Home
-description: Free software, built with AI, kept healthy by people.
+description: Technology, used creatively, for the people who use it.
 template: splash
 hero:
-  title: Free software, built with AI, kept healthy by people.
-  tagline: A community for open source projects that welcome AI-assisted development, and for working out, in the open, how software should be built and maintained now that AI is part of the toolbox.
+  title: Technology, used creatively, for the people who use it.
+  tagline: X-Tech Laboratories is an open source community that builds software people can shape to their own needs, that works with everything else they use, and that brings together the best of what open source already offers.
   image:
-    dark: ../../assets/hero-dark.svg
-    light: ../../assets/hero-light.svg
+    file: ../../assets/hero.svg
   actions:
     - text: Get involved
       link: /join/
       icon: right-arrow
-    - text: Awesome AI-FLOSS
-      link: /awesome/
+    - text: Our projects
+      link: /projects/
       variant: minimal
 ---
 
 import { Card, CardGrid, LinkCard } from '@astrojs/starlight/components';
 
-## Why this community exists
+## What we stand for
 
 <CardGrid>
-  <Card title="AI learned from open source" icon="open-book">
-    Today's coding models were trained largely on code that free software communities wrote and shared. That work deserves to benefit from what it made possible.
+  <Card title="Extensible, configurable, interoperable" icon="puzzle">
+    Apps adapt to their users, not the other way round: plugins, settings, themes and layouts, built on open formats and standard protocols so they work with other tools. When people want different things, the answer is a plugin or a setting, not a fork. Software built this way reaches the largest number of people.
   </Card>
-  <Card title="AI is not going away" icon="rocket">
-    Companies already use AI to build and improve their products every day. If free software refuses the same tools on principle, it risks falling behind the proprietary alternatives it competes with.
+  <Card title="Consolidate, don't fragment" icon="random">
+    Open source spreads its effort across rival projects that each do part of the job. We bring their best features together under one roof and import their data, so switching costs nothing.
   </Card>
-  <Card title="Maintainers are stretched thin" icon="warning">
-    Many important projects rest on a handful of volunteers, and ecosystems splinter into forks and half-finished rewrites. AI can take on the repetitive work of triage, tests, documentation and upkeep, so people can focus on direction and design.
+  <Card title="Automation over toil" icon="rocket">
+    CI/CD and test-driven development carry the routine load. Tests are the contract every change must meet, builds, releases and checks run on their own, and a reproducible development environment works on the first day. Maintainers spend their time on direction and design.
   </Card>
-  <Card title="Too much AI software is built alone and thrown away" icon="puzzle">
-    Many free software communities turn away AI-assisted contributions, so people who build with AI start their own projects instead. Most of those end up with one user and no maintainer. AI-FLOSS gives them a shared home: one place where anyone can contribute, so effort goes into tools and apps everyone can use rather than a thousand one-off copies.
-  </Card>
-  <Card title="Disagreement doesn't have to mean a fork" icon="random">
-    When people want different things from a project, the answer can be to make it extensible, pluggable, configurable and interoperable, so each person gets what they need from the same codebase.
-  </Card>
-  <Card title="Open source can lead" icon="star">
-    With good tooling and good habits, community projects can move faster, stay maintained for longer, and stand up to their commercial counterparts on quality, not just on price.
+  <Card title="AI-assisted development" icon="open-book">
+    AI is welcome and used in the open: accountable, disclosed, reviewed, and guided by each project's `AGENTS.md`.
   </Card>
 </CardGrid>
 
-## What we work on
+## Guidelines
 
-Using AI well takes more than turning it on. We develop, test and share practical mechanisms any
-project can adopt.
+Practical mechanisms any project can adopt, one pillar at a time.
 
 <CardGrid>
-  <LinkCard title="Prompting guidelines for agents" description="Tell every AI agent how your project works." href="/guidelines/prompting/" />
-  <LinkCard title="Clear disclosure" description="Say how AI was involved in a change." href="/guidelines/disclosure/" />
-  <LinkCard title="AI-assisted review" description="Use AI to check code, not only to write it." href="/guidelines/review/" />
+  <LinkCard title="Extensible and interoperable" description="Let one project serve many needs." href="/guidelines/extensibility/" />
+  <LinkCard title="Consolidation" description="Bring competing projects together without losing their users." href="/guidelines/consolidation/" />
+  <LinkCard title="Automation" description="Let CI/CD carry the routine work." href="/guidelines/automation/" />
   <LinkCard title="Test-driven development" description="Make tests the contract every change must meet." href="/guidelines/testing/" />
+  <LinkCard title="Prompting guidelines for agents" description="Tell every AI agent how your project works." href="/guidelines/prompting/" />
   <LinkCard title="AI Readiness Score" description="Check how ready a project is for AI-assisted development." href="/guidelines/readiness/" />
-  <LinkCard title="Readable code" description="Keep code simple enough for a person to take over." href="/guidelines/readable-code/" />
 </CardGrid>
 
 ## Our projects
 
 <CardGrid>
-  <LinkCard title="Anthem" description="A desktop music player with a real library engine, re-layoutable and re-skinnable. Our flagship." href="/projects/#anthem" />
+  <LinkCard title="Anthem" description="A desktop music player that joins gmusicbrowser's library engine to a re-layoutable, re-skinnable interface. Our flagship." href="/projects/#anthem" />
   <LinkCard title="ai-readiness" description="Score any repository on how ready it is for AI-assisted development." href="/projects/#ai-readiness" />
 </CardGrid>
 
@@ -68,16 +60,15 @@ project can adopt.
 1. **People stay accountable.** Whoever submits a change owns it, however it was written.
 2. **Be open about the tools.** Disclosure is normal and expected, never a mark against a contribution.
 3. **Tests before trust.** Code is accepted because it is verified, not because of who or what wrote it.
-4. **Readable by people.** All code, however it was written, stays simple and clear enough for a person to review and maintain without AI.
-5. **Respect licences and upstreams.** AI-assisted work follows the same licensing and attribution rules as any other.
-6. **Lighten the load on maintainers.** AI should reduce the work of reviewing contributions, not flood projects with low-effort ones.
+4. **Readable by people.** All code stays simple enough for a person to review and maintain without AI.
+5. **Respect licences and upstreams.** Credit the projects we build on and bring together, and follow their licences.
+6. **Lighten the load on maintainers.** Automation and AI should reduce the work of reviewing contributions, not add to it.
 7. **Build together, not alone.** Improve a shared project before starting a new one, and build it to last beyond its first user.
 8. **Extend, don't fork.** Settle differences with plugins, settings and open formats, so one project can serve many needs.
 9. **Share what works.** The guidelines, templates and tooling we build are free software too.
 
 ## Get involved
 
-See open source projects already built this way in [Awesome AI-FLOSS](/awesome), or read
-[how to get involved](/join). Everything happens in the open at
-[github.com/AI-FLOSS](https://github.com/AI-FLOSS).
-
+Read [how to get involved](/join), or see open source projects that already use AI in the open in
+[Awesome AI-Assisted Open Source](/awesome). Everything happens in the open at
+[github.com/x-tech-laboratories](https://github.com/x-tech-laboratories).

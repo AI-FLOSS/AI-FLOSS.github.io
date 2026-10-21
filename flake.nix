@@ -1,5 +1,5 @@
 {
-  description = "AI-FLOSS website development shell";
+  description = "X-Tech Laboratories website development shell";
 
   inputs.nixpkgs.url = "github:NixOS/nixpkgs/nixos-unstable";
 

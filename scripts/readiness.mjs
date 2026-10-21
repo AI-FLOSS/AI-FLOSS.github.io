@@ -1,5 +1,5 @@
 #!/usr/bin/env node
-// Rescores every Awesome AI-FLOSS entry and every AI-FLOSS repository with the ai-readiness package,
+// Rescores every Awesome AI-Assisted Open Source entry and every X-Tech Laboratories repository with the ai-readiness package,
 // and writes src/data/readiness.json.
 // A repository that fails to score keeps its previous result.
 import { execFileSync } from 'node:child_process';
@@ -28,7 +28,7 @@ const previous = (() => {
 })();
 
 // The organisation's own public repositories get scores and badges too.
-const own = ((await github(token)('orgs/AI-FLOSS/repos?type=public&per_page=100')) ?? [])
+const own = ((await github(token)('orgs/x-tech-laboratories/repos?type=public&per_page=100')) ?? [])
 	.filter((r) => !r.fork && !r.archived && r.name !== '.github')
 	.map((r) => r.full_name);
 const repos = [...new Set([...JSON.parse(readFileSync(AWESOME, 'utf8')).map((e) => e.repo), ...own])];
