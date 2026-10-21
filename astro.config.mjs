@@ -3,24 +3,29 @@ import { defineConfig } from 'astro/config';
 import starlight from '@astrojs/starlight';
 
 export default defineConfig({
-	site: 'https://ai-floss.github.io',
+	site: 'https://x-tech-laboratories.github.io',
 	integrations: [
 		starlight({
-			title: 'AI-FLOSS',
+			title: 'X-Tech Laboratories',
 			description:
-				'A community for AI-friendly free and open source development: prompting guidelines, disclosure, AI-assisted review and test-driven development.',
-			logo: { src: './public/favicon.svg', alt: '' },
+				'An open source community for extensible, interoperable software, consolidated projects, automated development and AI used in the open.',
+			logo: { src: './src/assets/logo.svg', alt: 'X-Tech Laboratories', replacesTitle: true },
 			favicon: '/favicon.svg',
 			social: [
-				{ icon: 'github', label: 'GitHub', href: 'https://github.com/AI-FLOSS' },
+				{ icon: 'github', label: 'GitHub', href: 'https://github.com/x-tech-laboratories' },
 				{ icon: 'matrix', label: 'Matrix', href: 'https://matrix.to/#/#ai-floss:matrix.org' },
 			],
-			editLink: { baseUrl: 'https://github.com/AI-FLOSS/AI-FLOSS.github.io/edit/main/' },
-			customCss: ['./src/styles/theme.css'],
+			editLink: { baseUrl: 'https://github.com/x-tech-laboratories/x-tech-laboratories.github.io/edit/main/' },
+			customCss: [
+				'@fontsource/noto-sans/400.css',
+				'@fontsource/noto-sans/700.css',
+				'@fontsource/rajdhani/700.css',
+				'./src/styles/theme.css',
+			],
 			sidebar: [
 				{ label: 'Guidelines', items: [{ autogenerate: { directory: 'guidelines' } }] },
 				{ label: 'Projects', slug: 'projects' },
-				{ label: 'Awesome AI-FLOSS', slug: 'awesome' },
+				{ label: 'Awesome AI-Assisted Open Source', slug: 'awesome' },
 				{ label: 'Get involved', slug: 'join' },
 			],
 		}),

@@ -2,7 +2,7 @@
 title: AI Readiness Score
 description: A four-point check of how ready an open source project is for AI-assisted development.
 sidebar:
-  order: 5
+  order: 9
 ---
 
 The AI Readiness Score measures how well a project is set up to accept AI-assisted contributions
@@ -29,11 +29,11 @@ could add.
 
 ## Check your project
 
-Run the [ai-readiness](https://github.com/AI-FLOSS/ai-readiness) checker. It needs Node.js 20 or
+Run the [ai-readiness](https://github.com/x-tech-laboratories/ai-readiness) checker. It needs Node.js 20 or
 later and a GitHub token, which it takes from `GITHUB_TOKEN` or from the GitHub CLI.
 
 ```sh
-npx github:AI-FLOSS/ai-readiness owner/repo
+npx github:x-tech-laboratories/ai-readiness owner/repo
 ```
 
 It prints the score and the file or activity that satisfied each check:
@@ -56,24 +56,24 @@ Add the GitHub Action to a workflow to see the score in every run's summary, or 
 when it drops below a minimum:
 
 ```yaml
-- uses: AI-FLOSS/ai-readiness@v0
+- uses: x-tech-laboratories/ai-readiness@v0
   with:
     min-score: 6
 ```
 
 ## Add a badge
 
-Every project on [Awesome AI-FLOSS](/awesome/) and every AI-FLOSS repository gets a
+Every project on [Awesome AI-Assisted Open Source](/awesome/) and every X-Tech Laboratories repository gets a
 [shields.io](https://shields.io) badge that updates weekly. Replace `OWNER` and `REPO` with yours:
 
 ```md
-[![AI readiness](https://img.shields.io/endpoint?url=https://ai-floss.github.io/badges/OWNER/REPO.json)](https://ai-floss.github.io/guidelines/readiness/)
+[![AI readiness](https://img.shields.io/endpoint?url=https://x-tech-laboratories.github.io/badges/OWNER/REPO.json)](https://x-tech-laboratories.github.io/guidelines/readiness/)
 ```
 
 For example, this website:
-[![AI readiness](https://img.shields.io/endpoint?url=https://ai-floss.github.io/badges/AI-FLOSS/AI-FLOSS.github.io.json)](/guidelines/readiness/)
+[![AI readiness](https://img.shields.io/endpoint?url=https://x-tech-laboratories.github.io/badges/x-tech-laboratories/x-tech-laboratories.github.io.json)](/guidelines/readiness/)
 
-To get a badge for another project, [suggest it for Awesome AI-FLOSS](/awesome/#suggest-a-project).
+To get a badge for another project, [suggest it for Awesome AI-Assisted Open Source](/awesome/#suggest-a-project).
 
 The checks are heuristics. If the checker gets your project wrong, please
-[open an issue](https://github.com/AI-FLOSS/ai-readiness/issues).
+[open an issue](https://github.com/x-tech-laboratories/ai-readiness/issues).

@@ -1,0 +1,38 @@
+---
+title: Automation
+sidebar:
+  order: 3
+---
+
+Every hour a maintainer spends on routine work is an hour not spent on direction and design.
+Anything a machine can check or do reliably should run on its own, on every change.
+
+## On every pull request
+
+- **Run the tests.** The full suite, on every supported platform. A change merges only when it
+  passes. See [test-driven development](/guidelines/testing/).
+- **Check formatting and lint.** Let tools settle style, so reviewers never have to.
+- **Build it.** A change that does not build never reaches review.
+- **Review it.** An [AI-assisted review](/guidelines/review/) can catch problems before a person
+  looks.
+
+## Protect the main branch
+
+Require a pull request and passing checks before anything lands on `main`, with no exceptions. The
+branch is then always releasable.
+
+## Releases and deployment
+
+- **Release from CI, not from a laptop.** Tag a version and let the pipeline build, sign and publish
+  it.
+- **Generate the changelog.** [Conventional Commits](https://www.conventionalcommits.org/) make
+  release notes a by-product of good commit messages.
+- **Deploy on merge.** Websites and services should update themselves when `main` changes.
+
+## Upkeep
+
+- **Keep dependencies current automatically.** A bot that opens update pull requests, checked by the
+  same CI, turns upgrades into routine merges.
+- **Make the environment reproducible.** A pinned development environment, such as a Nix flake, a
+  dev container or a lock file, means the first build works for every new contributor, and for CI.
+- **Schedule the boring checks.** Link checks, security scans and stale-issue triage can run weekly.

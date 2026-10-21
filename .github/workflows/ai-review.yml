@@ -36,7 +36,7 @@ jobs:
             Review this pull request against the rules in AGENTS.md. Focus on:
             - Bugs, broken links and build problems.
             - Claims on the site that are not backed by a linked source, especially new
-              Awesome AI-FLOSS entries: check that the evidence link supports the claim.
+              Awesome AI-Assisted Open Source entries: check that the evidence link supports the claim.
             - Wording that is unclear or overstated.
 
             Use inline comments for specific problems and one short summary comment.
