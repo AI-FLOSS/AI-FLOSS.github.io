@@ -1,7 +1,7 @@
 {
 	"ghostty-org/ghostty": {
 		"repo": "ghostty-org/ghostty",
-		"score": 6,
+		"score": 7,
 		"total": 8,
 		"checks": {
 			"policy": {
@@ -17,8 +17,8 @@
 				"evidence": "macos/GhosttyUITests/GhosttyCommandPaletteTests.swift; CI: .github/workflows/test.yml"
 			},
 			"review": {
-				"pass": false,
-				"evidence": null
+				"pass": true,
+				"evidence": "Copilot on https://github.com/ghostty-org/ghostty/pull/13332#discussion_r4343128111"
 			},
 			"environment": {
 				"pass": true,
@@ -37,7 +37,7 @@
 				"evidence": "ruleset requires pull request"
 			}
 		},
-		"checkedAt": "2026-10-21",
+		"checkedAt": "2026-10-22",
 		"truncated": false
 	},
 	"jesseduffield/lazygit": {
@@ -78,7 +78,7 @@
 				"evidence": "branch protection requires status checks"
 			}
 		},
-		"checkedAt": "2026-10-21",
+		"checkedAt": "2026-10-22",
 		"truncated": false
 	},
 	"simonw/datasette": {
@@ -119,7 +119,7 @@
 				"evidence": null
 			}
 		},
-		"checkedAt": "2026-10-21",
+		"checkedAt": "2026-10-22",
 		"truncated": false
 	},
 	"simonw/tools": {
@@ -160,7 +160,7 @@
 				"evidence": null
 			}
 		},
-		"checkedAt": "2026-10-21",
+		"checkedAt": "2026-10-22",
 		"truncated": false
 	},
 	"jdx/mise": {
@@ -201,7 +201,7 @@
 				"evidence": "ruleset requires pull request"
 			}
 		},
-		"checkedAt": "2026-10-21",
+		"checkedAt": "2026-10-22",
 		"truncated": false
 	},
 	"jdx/hk": {
@@ -242,7 +242,7 @@
 				"evidence": "branch protection requires status checks"
 			}
 		},
-		"checkedAt": "2026-10-21",
+		"checkedAt": "2026-10-22",
 		"truncated": false
 	},
 	"pnpm/pnpm": {
@@ -283,7 +283,7 @@
 				"evidence": "ruleset requires pull request"
 			}
 		},
-		"checkedAt": "2026-10-21",
+		"checkedAt": "2026-10-22",
 		"truncated": false
 	},
 	"sqlc-dev/sqlc": {
@@ -324,7 +324,7 @@
 				"evidence": "ruleset requires pull request"
 			}
 		},
-		"checkedAt": "2026-10-21",
+		"checkedAt": "2026-10-22",
 		"truncated": false
 	},
 	"gastownhall/beads": {
@@ -365,7 +365,7 @@
 				"evidence": "ruleset requires required status checks"
 			}
 		},
-		"checkedAt": "2026-10-21",
+		"checkedAt": "2026-10-22",
 		"truncated": false
 	},
 	"mitsuhiko/insta": {
@@ -406,7 +406,7 @@
 				"evidence": null
 			}
 		},
-		"checkedAt": "2026-10-21",
+		"checkedAt": "2026-10-22",
 		"truncated": false
 	},
 	"simonw/sqlite-utils": {
@@ -447,7 +447,7 @@
 				"evidence": null
 			}
 		},
-		"checkedAt": "2026-10-21",
+		"checkedAt": "2026-10-22",
 		"truncated": false
 	},
 	"tursodatabase/turso": {
@@ -481,14 +481,14 @@
 			},
 			"disclosure": {
 				"pass": true,
-				"evidence": "9 of the last 100 commits with an AI trailer"
+				"evidence": "4 of the last 100 commits with an AI trailer"
 			},
 			"protection": {
 				"pass": true,
 				"evidence": "ruleset requires pull request"
 			}
 		},
-		"checkedAt": "2026-10-21",
+		"checkedAt": "2026-10-22",
 		"truncated": false
 	},
 	"Aider-AI/aider": {
@@ -529,7 +529,7 @@
 				"evidence": null
 			}
 		},
-		"checkedAt": "2026-10-21",
+		"checkedAt": "2026-10-22",
 		"truncated": false
 	},
 	"OpenHands/OpenHands": {
@@ -563,14 +563,14 @@
 			},
 			"disclosure": {
 				"pass": true,
-				"evidence": "37 of the last 100 commits with an AI trailer; 1 of the last 30 pull requests with AI involvement ticked"
+				"evidence": "38 of the last 100 commits with an AI trailer; 1 of the last 30 pull requests with AI involvement ticked"
 			},
 			"protection": {
 				"pass": true,
 				"evidence": "ruleset requires pull request"
 			}
 		},
-		"checkedAt": "2026-10-21",
+		"checkedAt": "2026-10-22",
 		"truncated": false
 	},
 	"aaif-goose/goose": {
@@ -588,11 +588,11 @@
 			},
 			"tests": {
 				"pass": true,
-				"evidence": "buzz/github_manager.test.mjs; CI: .github/workflows/pr-smoke-test.yml"
+				"evidence": "buzz/github_manager.test.mjs; CI: .github/workflows/ci.yml"
 			},
 			"review": {
 				"pass": true,
-				"evidence": "chatgpt-codex-connector[bot] on https://github.com/aaif-goose/goose/pull/13060#discussion_r4341079094"
+				"evidence": "chatgpt-codex-connector[bot] on https://github.com/aaif-goose/goose/pull/13064#discussion_r4342279916"
 			},
 			"environment": {
 				"pass": true,
@@ -611,7 +611,48 @@
 				"evidence": "branch protection requires status checks"
 			}
 		},
-		"checkedAt": "2026-10-21",
+		"checkedAt": "2026-10-22",
+		"truncated": false
+	},
+	"x-tech-laboratories/X-Monitor": {
+		"repo": "x-tech-laboratories/X-Monitor",
+		"score": 7,
+		"total": 8,
+		"checks": {
+			"policy": {
+				"pass": true,
+				"evidence": "x-tech-laboratories/.github: AI_POLICY.md"
+			},
+			"agents": {
+				"pass": true,
+				"evidence": "AGENTS.md"
+			},
+			"tests": {
+				"pass": true,
+				"evidence": "tests/__init__.py; CI: .github/workflows/ci.yml"
+			},
+			"review": {
+				"pass": true,
+				"evidence": ".github/workflows/ai-review.yml"
+			},
+			"environment": {
+				"pass": true,
+				"evidence": "flake.nix"
+			},
+			"quality": {
+				"pass": true,
+				"evidence": ".github/workflows/ci.yml"
+			},
+			"disclosure": {
+				"pass": true,
+				"evidence": "10 of the last 100 commits with an AI trailer"
+			},
+			"protection": {
+				"pass": false,
+				"evidence": null
+			}
+		},
+		"checkedAt": "2026-10-22",
 		"truncated": false
 	},
 	"x-tech-laboratories/X-Stream": {
@@ -652,7 +693,7 @@
 				"evidence": "ruleset requires pull request"
 			}
 		},
-		"checkedAt": "2026-10-21",
+		"checkedAt": "2026-10-22",
 		"truncated": false
 	},
 	"x-tech-laboratories/X-Music": {
@@ -686,14 +727,14 @@
 			},
 			"disclosure": {
 				"pass": true,
-				"evidence": "6 of the last 42 commits with an AI trailer; 3 of the last 6 pull requests with AI involvement ticked"
+				"evidence": "7 of the last 43 commits with an AI trailer; 3 of the last 6 pull requests with AI involvement ticked"
 			},
 			"protection": {
 				"pass": true,
 				"evidence": "ruleset requires pull request"
 			}
 		},
-		"checkedAt": "2026-10-21",
+		"checkedAt": "2026-10-22",
 		"truncated": false
 	},
 	"x-tech-laboratories/x-tech-laboratories.github.io": {
@@ -727,14 +768,14 @@
 			},
 			"disclosure": {
 				"pass": true,
-				"evidence": "6 of the last 14 commits with an AI trailer; 5 of the last 7 pull requests with AI involvement ticked"
+				"evidence": "8 of the last 16 commits with an AI trailer; 6 of the last 8 pull requests with AI involvement ticked"
 			},
 			"protection": {
 				"pass": true,
 				"evidence": "ruleset requires pull request"
 			}
 		},
-		"checkedAt": "2026-10-21",
+		"checkedAt": "2026-10-22",
 		"truncated": false
 	},
 	"x-tech-laboratories/ai-readiness": {
@@ -775,7 +816,7 @@
 				"evidence": "ruleset requires pull request"
 			}
 		},
-		"checkedAt": "2026-10-21",
+		"checkedAt": "2026-10-22",
 		"truncated": false
 	}
 }
